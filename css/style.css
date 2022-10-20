@@ -130,8 +130,9 @@ button {
 
 .nav-link-item,
 .contact-item {
+  padding: 32px 0;
   font-weight: 500;
-  line-height: 1.41;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--brand-color);
 }
@@ -567,5 +568,17 @@ button {
 }
 
 .current {
+  position: relative;
   color: var(--accent-color);
 }
+
+.current::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  }
