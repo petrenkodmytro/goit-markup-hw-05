@@ -279,7 +279,22 @@ button {
 }
 
 .work-list .item {
+  position: relative;
   width: calc((100% - 2 * 30px) / 3);
+}
+
+.work-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-bg-color);
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* ----------team---------- */
@@ -436,6 +451,8 @@ button {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+/* ----------cads---------- */
+
 .cads-list {
   display: flex;
   flex-wrap: wrap;
@@ -475,6 +492,32 @@ button {
   color: var(--secondary-color);
 }
 
+.cads-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overley {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transform: translatey(0);
+  transition: transform 250ms ease;
+}
+
+.overley-text {
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--secondary-bg-color);
+}
+
+.cads-list-link:hover .overley {
+  opacity: 1;
+  transform: translatey(-100%);
+}
 /* ----------footer---------- */
 
 .footer {
@@ -579,6 +622,6 @@ button {
   display: block;
   width: 100%;
   height: 4px;
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: var(--accent-color);
-  }
+}
