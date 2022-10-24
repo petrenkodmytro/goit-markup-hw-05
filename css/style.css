@@ -637,7 +637,7 @@ button {
 /* ----------modal---------- */
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 
 .modal {
@@ -665,6 +665,12 @@ button {
   border-radius: 50%;
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  border-color: var(--accent-color);
 }
 
 /* ----------effects---------- */
